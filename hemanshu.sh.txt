@@ -1,0 +1,13 @@
+#!/bin/sh
+
+cat nov17lab2autacnztraceroute.txt | gawk '(/134.68.5.54/) {print $1}'>> sk1.txt {for analysis file of traceroute file to calculate average, min, max, standard dev.}
+
+cat nov17lab2autacnztraceroute.txt | gawk '{print $1}'>>fluttering1.txt {calculating fluttering}
+
+cat nov17lab2autacnztraceroute.txt | gawk '(/* * */) {print $1}'>> out1.txt {for calculating temporary outages}
+
+cat nov17lab2autacnztraceroute.txt | gawk '(/* * */) {print $1}'>> permanent1.txt{calculating Permanent outages}
+
+cat nov17lab2autacnzping.txt | (awk -F/ '/^rtt/ { print $5 }') >> rtt11.txt{calculating Roundtrip time}
+
+
